@@ -1,0 +1,24 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "clean": "rimraf dist",
+    "build": "parcel build --no-source-maps --no-content-hash",
+    "prebuild": "npm run clean",
+    "postbuild": "javascript-obfuscator dist/index.10ccb9b5.js --output dist/index.10ccb9b5.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.1",
+    "@parcel/transformer-webmanifest": "^2.6.1",
+    "buffer": "^6.0.3",
+    "javascript-obfuscator": "^4.0.0",
+    "parcel": "^2.6.1",
+    "rimraf": "^3.0.2"
+  }
+}
